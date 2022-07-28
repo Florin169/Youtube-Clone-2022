@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoInfo = () => {
+const VideoInfo = ({ video }) => {
   return (
     <div className="border-y border-gray-700 py-5 my-3 flex space-x-4">
       <div className="w-14">
@@ -9,7 +9,7 @@ const VideoInfo = () => {
       <div>
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="font-semibold">Channel Name</h1>
+            <h1 className="font-semibold">{video?.snippet?.channelTitle}</h1>
             <p className="text-xs">150k subscribers</p>
           </div>
 
@@ -21,10 +21,7 @@ const VideoInfo = () => {
         </div>
 
         <p className="mt-5 w-full lg:w-[50%] text-sm">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-          Exercitationem ipsam aliquid ab eius, repellendus perspiciatis magni,
-          distinctio autem quibusdam id tenetur debitis ea quod voluptatem porro
-          corrupti? Nemo, ratione asperiores?
+          {video?.snippet?.description}
         </p>
       </div>
     </div>

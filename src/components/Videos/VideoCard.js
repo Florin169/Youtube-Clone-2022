@@ -1,10 +1,14 @@
 import React from "react";
 
-const VideoCard = () => {
+const VideoCard = ({ video }) => {
   return (
     <div className="w-[360px] h-[310px] mb-10">
       <div className="h-[201px] w-full bg-red-100">
-        <img src="" alt="" className="w-full h-full bg-cover" />
+        <img
+          src={video?.thumbnails?.high?.url}
+          alt="thumbnail"
+          className="w-full h-full bg-cover"
+        />
       </div>
       <div className="mt-3 flex space-x-3">
         <div className="h-full">
@@ -12,8 +16,8 @@ const VideoCard = () => {
         </div>
 
         <div>
-          <h1 className="text-white font-semibold text-lg">Title</h1>
-          <p className="text-sm text-[#9F9F9F]">Channel</p>
+          <h1 className="text-white font-semibold text-lg">{video?.title}</h1>
+          <p className="text-sm text-[#9F9F9F]">{video?.channelTitle}</p>
           <div className="flex items-center space-x-3 text-sm text-[#9F9F9F]">
             <p>100 views</p>
             <p>2 hours ago</p>

@@ -11,7 +11,7 @@ import {
 
 const Sidebar = () => {
   return (
-    <div className="w-[240px] bg-[#191A1B] text-white h-screen pt-5">
+    <div className="w-[240px] bg-[#191A1B] text-white h-screen pt-5 hidden lg:block">
       <div>
         <SidebarCategory text="Home" icon={<AiFillHome />} />
         <SidebarCategory text="Explore" icon={<FaRegCompass />} />
