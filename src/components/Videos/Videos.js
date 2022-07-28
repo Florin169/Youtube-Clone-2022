@@ -11,7 +11,7 @@ const Videos = () => {
   const videos = useSelector((state) => state.videos.videos);
 
   return (
-    <div className="px-20 py-5 grid md:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div className="px-20 py-5 grid md:grid-cols-2 xl:grid-cols-4 gap-4 overscroll-contain">
       {videos.map((video) => (
         <Link to={`/video/${video.id.videoId}`} key={video.id.videoId}>
           {loading ? <SkeletonVideo /> : <VideoCard video={video.snippet} />}

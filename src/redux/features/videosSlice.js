@@ -11,7 +11,7 @@ const videosSlice = createSlice({
   initialState,
   reducers: {
     getVideos: (state, action) => {
-      state.videos = action.payload;
+      state.videos = [...state.videos, ...action.payload];
     },
 
     getUser: (state, action) => {

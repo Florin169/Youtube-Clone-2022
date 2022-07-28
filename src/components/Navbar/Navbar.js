@@ -6,6 +6,8 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase/firebase";
 import { useSelector } from "react-redux";
 import LoggedIn from "./LoggedIn";
+import { ReactComponent as Logo } from "../../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const logIn = () => {
@@ -18,9 +20,13 @@ const Navbar = () => {
     <div className="bg-[#191A1B] h-14 px-5 lg:px-10 flex justify-between items-center text-white">
       <div className="flex items-center space-x-4">
         <AiOutlineMenu className="w-6 h-6 hidden lg:block" />
-        <h1 className="font-bold">YOUTUBE</h1>
+        <Link to="/">
+          <div className="w-24 h-24">
+            <Logo />
+          </div>
+        </Link>
       </div>
-      <div className="h-10 w-[530px] flex items-center border border-gray-800">
+      <div className="h-10 w-[530px] flex items-center border border-gray-800 mx-3">
         <input
           type="text"
           placeholder="Search"
